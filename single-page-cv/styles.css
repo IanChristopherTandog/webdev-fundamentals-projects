@@ -1,0 +1,26 @@
+:root{
+    --bg-primary: #ffffff;
+    --bg-secondary: #000000;
+    --third-color: green;
+    --forth-color: blue;
+    --text-primary: #000000;
+    --text-secondary: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    position: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.headings{
+    color: var(--third-color);
+}
+
+.entryHeadings {
+    color: var(--forth-color);
+}

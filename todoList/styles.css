@@ -1,0 +1,57 @@
+:root{
+    --bg-primary: #f9f9f9;
+    --bg-secondary: #302e2e;
+    --bg-tertiary: #cecece;
+    --text-primary: #000000;
+    --text-secondary: #ffffff;
+    --text-tertiary: #555555;
+    --accent-color: #404940;
+    --accent-primary: #8257e5;
+    --accent-secondary: #41a9ff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: var(--bg-tertiary);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    color:#002765;
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-primary);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-left: 25px;
+}

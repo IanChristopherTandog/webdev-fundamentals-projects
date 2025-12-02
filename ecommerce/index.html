@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeliBeli – Fashion Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top utility bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="topbar-link">Download BeliBeli App</span>
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-link">Mitra BeliBeli</button>
+        <button class="topbar-link">About</button>
+        <button class="topbar-link">Care</button>
+        <button class="topbar-link">Promo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main header with logo + search + actions -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">B</span>
+        <span class="logo-text">BeliBeli<span class="logo-dot">.com</span></span>
+      </div>
+
+      <form class="search-bar" action="javascript:void(0)">
+        <select class="search-category" aria-label="Search category">
+          <option value="all">All Category</option>
+          <option value="fashion">Fashion</option>
+          <option value="electronics">Electronics</option>
+          <option value="home">Home & Living</option>
+        </select>
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search product or brand name..."
+          aria-label="Search"
+        />
+        <button class="primary-btn search-btn" type="submit">
+          Search
+        </button>
+      </form>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Notifications">🔔</button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          🛒
+          <span id="cart-count" class="badge">0</span>
+        </button>
+        <button class="secondary-btn auth-btn">Login</button>
+        <button class="primary-btn auth-btn">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO + categories -->
+    <section class="hero-section">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">#Big Fashion Sale</p>
+          <h1 class="hero-title">
+            Limited Time Offer! <br />
+            <span>Up to 50% OFF!</span>
+          </h1>
+          <p class="hero-subtitle">
+            Redefine your everyday style with our curated collection of modern
+            essentials.
+          </p>
+          <div class="hero-cta">
+            <button class="primary-btn">Shop Now</button>
+            <button class="ghost-btn">View Collections</button>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card hero-card-1"></div>
+          <div class="hero-card hero-card-2"></div>
+          <div class="hero-card hero-card-3"></div>
+          <div class="hero-floating-tag">
+            <span>New Arrivals</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories row -->
+      <div class="categories-wrapper">
+        <div class="container categories-inner">
+          <button class="category-pill">
+            <span class="category-icon">👕</span>
+            <span class="category-label">T-Shirt</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">🧥</span>
+            <span class="category-label">Jacket</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">👔</span>
+            <span class="category-label">Shirt</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">👖</span>
+            <span class="category-label">Jeans</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">👜</span>
+            <span class="category-label">Bag</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">👟</span>
+            <span class="category-label">Shoes</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">⌚</span>
+            <span class="category-label">Watches</span>
+          </button>
+          <button class="category-pill">
+            <span class="category-icon">🧢</span>
+            <span class="category-label">Caps</span>
+          </button>
+          <button class="category-pill category-pill-all">
+            <span class="category-icon">⋮</span>
+            <span class="category-label">All Category</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLASH SALE -->
+    <section class="section flash-sale">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Flash Sale</h2>
+            <div class="countdown" aria-label="Flash sale countdown">
+              <div class="time-segment">
+                <span id="countdown-hours">08</span>
+                <small>Hours</small>
+              </div>
+              <span class="time-separator">:</span>
+              <div class="time-segment">
+                <span id="countdown-minutes">00</span>
+                <small>Minutes</small>
+              </div>
+              <span class="time-separator">:</span>
+              <div class="time-segment">
+                <span id="countdown-seconds">00</span>
+                <small>Seconds</small>
+              </div>
+            </div>
+          </div>
+          <button class="ghost-btn ghost-btn-small">
+            View All
+          </button>
+        </div>
+
+        <div class="product-grid flash-grid">
+          <!-- Product 1 -->
+          <article class="product-card">
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder jacket"></div>
+            </div>
+            <h3 class="product-title">
+              EliteShield Performance Men’s Jacket
+            </h3>
+            <p class="product-subtitle">
+              Windproof, breathable shell with soft lining.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp255.000</span>
+                <span class="old-price">Rp325.000</span>
+              </div>
+              <span class="discount-pill">-25%</span>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.8 | 2.1k sold</span>
+              <span class="stock">9/10 Sold</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card">
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder hat"></div>
+            </div>
+            <h3 class="product-title">Gentlemen’s Summer Hat – Premium</h3>
+            <p class="product-subtitle">
+              Lightweight blend for all-day comfort.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp99.000</span>
+                <span class="old-price">Rp160.000</span>
+              </div>
+              <span class="discount-pill">-38%</span>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.6 | 890 sold</span>
+              <span class="stock">9/10 Sold</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card">
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder bag"></div>
+            </div>
+            <h3 class="product-title">OptiZoom Camera Shoulder Bag</h3>
+            <p class="product-subtitle">
+              Compact design with water-resistant coating.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp250.000</span>
+                <span class="old-price">Rp325.000</span>
+              </div>
+              <span class="discount-pill">-23%</span>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.9 | 1.1k sold</span>
+              <span class="stock">5/10 Sold</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card">
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder heels"></div>
+            </div>
+            <h3 class="product-title">Chicly Grey Peep Toe Sandals</h3>
+            <p class="product-subtitle">
+              Elegant heels for both work and nights out.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp180.000</span>
+                <span class="old-price">Rp260.000</span>
+              </div>
+              <span class="discount-pill">-30%</span>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.7 | 640 sold</span>
+              <span class="stock">6/10 Sold</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODAY'S FOR YOU / RECOMMENDATIONS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Today’s For You!</h2>
+            <p class="section-subtitle">
+              Hand-picked pieces based on what customers love most.
+            </p>
+          </div>
+
+          <div class="pill-tabs" id="today-filters">
+            <button class="pill-tab active" data-filter="all">Best Seller</button>
+            <button class="pill-tab" data-filter="keep-stylish">Keep Stylish</button>
+            <button class="pill-tab" data-filter="special">Special Discount</button>
+            <button class="pill-tab" data-filter="official">Official Store</button>
+            <button class="pill-tab" data-filter="curated">Curated Product</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="today-grid">
+          <!-- Each card can belong to multiple categories via data-category -->
+          <article
+            class="product-card"
+            data-category="all best-seller keep-stylish official"
+          >
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder sneakers"></div>
+            </div>
+            <h3 class="product-title">UrbanFlex Everyday Sneakers</h3>
+            <p class="product-subtitle">
+              Minimalist silhouette with cushioned sole.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp199.000</span>
+                <span class="old-price">Rp260.000</span>
+              </div>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.9 | 3.2k sold</span>
+              <span class="stock">Official Store</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+
+          <article
+            class="product-card"
+            data-category="all keep-stylish curated"
+          >
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder hoodie"></div>
+            </div>
+            <h3 class="product-title">CloudSoft Oversized Hoodie</h3>
+            <p class="product-subtitle">
+              Ultra-soft fleece, perfect for chilly evenings.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp220.000</span>
+                <span class="old-price">Rp270.000</span>
+              </div>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.8 | 1.8k sold</span>
+              <span class="stock">Curated</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+
+          <article
+            class="product-card"
+            data-category="all special"
+          >
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder polo"></div>
+            </div>
+            <h3 class="product-title">Classic Piqué Polo Shirt</h3>
+            <p class="product-subtitle">
+              Breathable knit, tailored modern fit.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp120.000</span>
+                <span class="old-price">Rp199.000</span>
+              </div>
+              <span class="discount-pill">Special</span>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.5 | 970 sold</span>
+              <span class="stock">Limited Time</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+
+          <article
+            class="product-card"
+            data-category="all best-seller special official"
+          >
+            <button class="favorite-btn" aria-label="Toggle wishlist">♡</button>
+            <div class="product-image-wrapper">
+              <div class="product-image placeholder dress"></div>
+            </div>
+            <h3 class="product-title">SilkyFlow Midi Dress</h3>
+            <p class="product-subtitle">
+              Flattering A-line cut with subtle sheen.
+            </p>
+
+            <div class="product-price-row">
+              <div class="price-group">
+                <span class="current-price">Rp260.000</span>
+                <span class="old-price">Rp340.000</span>
+              </div>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="rating">⭐ 4.7 | 1.3k sold</span>
+              <span class="stock">Best Seller</span>
+            </div>
+
+            <button class="primary-btn add-to-cart-btn" type="button">
+              Add to Cart
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEST SELLING STORES -->
+    <section class="section stores-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Best Selling Store</h2>
+            <p class="section-subtitle">
+              Trusted shops with thousands of positive reviews.
+            </p>
+          </div>
+        </div>
+
+        <div class="stores-grid">
+          <article class="store-card">
+            <div class="store-header">
+              <div class="store-avatar">NS</div>
+              <div>
+                <h3 class="store-name">Nike Sale Mall</h3>
+                <p class="store-meta">Sportswear • 48 products</p>
+              </div>
+            </div>
+            <div class="store-products">
+              <div class="store-product-tile"></div>
+              <div class="store-product-tile"></div>
+              <div class="store-product-tile"></div>
+            </div>
+          </article>
+
+          <article class="store-card">
+            <div class="store-header">
+              <div class="store-avatar">BD</div>
+              <div>
+                <h3 class="store-name">Bandak Disaster Mall</h3>
+                <p class="store-meta">Outdoor • 32 products</p>
+              </div>
+            </div>
+            <div class="store-products">
+              <div class="store-product-tile"></div>
+              <div class="store-product-tile"></div>
+              <div class="store-product-tile"></div>
+            </div>
+          </article>
+
+          <article class="store-card">
+            <div class="store-header">
+              <div class="store-avatar">AW</div>
+              <div>
+                <h3 class="store-name">Aurora Well Mall</h3>
+                <p class="store-meta">Lifestyle • 24 products</p>
+              </div>
+            </div>
+            <div class="store-products">
+              <div class="store-product-tile"></div>
+              <div class="store-product-tile"></div>
+              <div class="store-product-tile"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">B</span>
+          <span class="logo-text">BeliBeli<span class="logo-dot">.com</span></span>
+        </div>
+        <p class="footer-text">
+          “Let’s Shop Beyond Boundaries” – discover fashion and lifestyle
+          products from your favorite brands, in one place.
+        </p>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Help</h4>
+          <a href="#">Guide</a>
+          <a href="#">Return & Refund</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer-column">
+          <h4>Get the App</h4>
+          <a href="#">App Store</a>
+          <a href="#">Google Play</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2025 BeliBeli. All rights reserved.</span>
+        <span class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
